@@ -5,7 +5,7 @@ A simple and interactive **Machine Learning web app** built with **Streamlit** t
 ---
 
 ## 🚀 Live Demo
-🔗 [View on Streamlit Cloud](https://share.streamlit.io/your-username/sms-spam-classifier)
+🔗 [View on Streamlit Cloud](https://share.streamlit.io/talalhafizmuhammad/sms-email-spam-classification)
 
 *(Replace with your actual Streamlit app link after deployment.)*
 
