@@ -1,18 +1,25 @@
 import streamlit as st #type: ignore
 import pickle
 import string
-from nltk.corpus import stopwords #type: ignore
 import nltk   #type: ignore
+from nltk.corpus import stopwords #type: ignore
 from nltk.stem.porter import PorterStemmer #type: ignore
+
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
 
 try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
+
+try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
     nltk.download('stopwords')
+
 ps = PorterStemmer()
 def transform_text(text):
     text = text.lower()
@@ -48,3 +55,4 @@ if st.button('Predict'):
         st.header("Spam message! 🚫")
     else:
         st.header("Not a spam message! ✅")
+
