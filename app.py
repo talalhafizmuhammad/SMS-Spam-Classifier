@@ -4,7 +4,15 @@ import string
 from nltk.corpus import stopwords #type: ignore
 import nltk   #type: ignore
 from nltk.stem.porter import PorterStemmer #type: ignore
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 ps = PorterStemmer()
 def transform_text(text):
     text = text.lower()
